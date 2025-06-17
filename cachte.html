@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Royal Perfume - Parfums Cacheté</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ==================== */
+        /* STRUCTURE GÉNÉRALE */
+        /* ==================== */
+        .parfum-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+        
+        /* ============= */
+        /* CARTES PARFUM */
+        /* ============= */
+        .parfum-card {
+            width: calc(25% - 20px);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #FFFFFF;
+        }
+        
+        .parfum-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .parfum-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 2px solid #FFF8E1;
+        }
+        
+        .parfum-info {
+            padding: 20px;
+            background: #FFFFFF;
+        }
+        
+        .parfum-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333333;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .parfum-prices {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .price-badge {
+            background: #FFF8E1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #333333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .price-badge:hover {
+            background: #FFD700;
+            color: #FFFFFF;
+        }
+        
+        /* ================ */
+        /* TITRE DE SECTION */
+        /* ================ */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 40px;
+            font-family: 'Abril Fatface', cursive;
+            color: #fffdfd;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #FFD700;
+        }
+        
+        /* ========= */
+        /* EN-TÊTE */
+        /* ========= */
+        #colorlib-logo a {
+            background-color: #FFD700;
+            background-blend-mode: overlay;
+        }
+        
+        /* ================= */
+        /* NAVIGATION ACTIVE */
+        /* ================= */
+        .colorlib-active a {
+            color: #FFD700 !important;
+            font-weight: 500;
+        }
+        
+        /* ============ */
+        /* RESPONSIVE */
+        /* ============ */
+        @media (max-width: 992px) {
+            .parfum-card {
+                width: calc(33.333% - 15px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .parfum-card {
+                width: calc(50% - 10px);
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .parfum-card {
+                width: 100%;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* =========== */
+        /* ANIMATIONS */
+        /* =========== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .parfum-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        /* Délai d'animation pour chaque carte */
+        .parfum-card:nth-child(1) { animation-delay: 0.1s; }
+        .parfum-card:nth-child(2) { animation-delay: 0.2s; }
+        .parfum-card:nth-child(3) { animation-delay: 0.3s; }
+        .parfum-card:nth-child(4) { animation-delay: 0.4s; }
+        .parfum-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+
+            <h1 id="colorlib-logo" class="mb-4 mb-md-5"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Royal <span>Perfume</span></a></h1>
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home"></i> Accueil </a></li>
+                 	<li><a href="femme.html"><i class="fa fa-female"></i> Parfums Femme</a></li>
+					<li><a href="homme.html"><i class="fa fa-male"></i> Parfums Homme</a></li>
+					<li><a href="unix.html"><i class="fa fa-venus-mars"></i> Parfums Unisex</a></li>
+                    <li class="colorlib-active"><a href="cachte.html"><i class="fa fa-lock"></i> Parfums Cacheté</a></li>
+                   	 <li><a href="cosmetique.html"><i class="fa fa-paint-brush"></i> Cosmétiques</a></li>
+					<li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <div class="mb-4">
+                
+                
+            </aside> <!-- END COLORLIB-ASIDE -->
+
+       <div id="colorlib-main">
+            <section class="ftco-section">
+                <div class="container">
+                    <h2 class="section-title">Nos Parfums Cacheté </h2>
+                    
+                    <div class="parfum-container">
+                        <!-- Parfum 1 -->
+                        <div class="parfum-card">
+                            <img src="images/assad.jpg" alt="Assad - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Asad</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Parfum 2 -->
+                        <div class="parfum-card">
+                            <img src="images/maher.jpg" alt="Maher - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Maahir</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Parfum 3 -->
+                        <div class="parfum-card">
+                            <img src="images/ammeret-arab.jpg" alt="Ammeret Arab - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Ameerat al arab</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Parfum 4 -->
+                        <div class="parfum-card">
+                            <img src="images/yara.jpg" alt="Yara - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Yara</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Parfum 5 -->
+                        <div class="parfum-card">
+                            <img src="images/my-way.jpg" alt="My Way - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">My Way</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Parfum 6 -->
+                        <div class="parfum-card">
+                            <img src="images/Black Opium Original.jpg" alt="Black Opium Original - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Black Opium Original</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NOUVEAU Parfum 7 -->
+                        <div class="parfum-card">
+                            <img src="images/oud-royal.jpeg" alt="Oud Royal - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Oud Royal</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NOUVEAU Parfum 8 -->
+                        <div class="parfum-card">
+                            <img src="images/ambre-sultan.jpg" alt="Ambre Sultan - Parfum Cacheté" class="parfum-image">
+                            <div class="parfum-info">
+                                <h3 class="parfum-title">Ambre Sultan</h3>
+                                <div class="parfum-prices">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

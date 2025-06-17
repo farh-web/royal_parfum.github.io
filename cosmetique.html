@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Royal Perfume - Cosmétiques</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* STRUCTURE GÉNÉRALE */
+        .cosmetic-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+        
+        /* CARTES PRODUIT */
+        .cosmetic-card {
+            width: calc(25% - 20px);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #FFFFFF;
+        }
+        
+        .cosmetic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cosmetic-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 2px solid #FFF8E1;
+        }
+        
+        .cosmetic-info {
+            padding: 20px;
+            background: #FFFFFF;
+        }
+        
+        .cosmetic-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333333;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .cosmetic-prices {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .price-badge {
+            background: #FFF8E1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #333333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .price-badge:hover {
+            background: #FFD700;
+            color: #FFFFFF;
+        }
+        
+        /* TITRE DE SECTION */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 40px;
+            font-family: 'Abril Fatface', cursive;
+            color: #fffdfd;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #FFD700;
+        }
+        
+        /* CATÉGORIES */
+        .cosmetic-category {
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+        
+        .category-title {
+            font-family: 'Abril Fatface', cursive;
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .cosmetic-card {
+                width: calc(33.333% - 15px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cosmetic-card {
+                width: calc(50% - 10px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cosmetic-card {
+                width: 100%;
+            }
+        }
+        
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .cosmetic-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .cosmetic-card:nth-child(1) { animation-delay: 0.1s; }
+        .cosmetic-card:nth-child(2) { animation-delay: 0.2s; }
+        .cosmetic-card:nth-child(3) { animation-delay: 0.3s; }
+        .cosmetic-card:nth-child(4) { animation-delay: 0.4s; }
+        .cosmetic-card:nth-child(5) { animation-delay: 0.5s; }
+        .cosmetic-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+
+            <h1 id="colorlib-logo" class="mb-4 mb-md-5"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Royal <span>Perfume</span></a></h1>
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+					<li><a href="index.html"><i class="fa fa-home"></i> Accueil </a></li>
+                 	<li><a href="femme.html"><i class="fa fa-female"></i> Parfums Femme</a></li>
+					<li><a href="homme.html"><i class="fa fa-male"></i> Parfums Homme</a></li>
+					<li><a href="unix.html"><i class="fa fa-venus-mars"></i> Parfums Unisex</a></li>
+					<li><a href="cachte.html"><i class="fa fa-lock"></i> Parfums Cacheté</a></li>
+                    <li class="colorlib-active"><a href="cosmetique.html"><i class="fa fa-paint-brush"></i>  Cosmétiques </a></li>
+					<li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <div class="mb-4">
+                   
+                </div>
+              
+            </div>
+        </aside>
+
+        <div id="colorlib-main">
+            <section class="ftco-section">
+                <div class="container">
+                    <h1 class="section-title">Nos Produits Cosmétiques</h1>
+                    
+                    <!-- Section Savons -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Savons</h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/2.jpeg" alt="Savon à la Lavande" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title" >نيلة زرقاء </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/1.webp" alt="Savon à la Rose" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">صابون لبان الذكر</h3>
+                                    <div class="cosmetic-prices">
+                                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/3.webp" alt="Savon au Charbon" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Savon Dove </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/4.jpeg" alt="Savon au Miel" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Savon Lux</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                       <!-- Section Shampoings -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Shampoings </h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/11.jpg" alt="Shampoing à l'Argan" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Shampooing ULTRA DOUX </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/12.jpg" alt="Shampoing à la Noix de Coco" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Shampoing Sunsilk </h3>
+                                    <div class="cosmetic-prices">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/13.jpg" alt="Shampoing à l'Aloe Vera" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Shampoing Haden Shoulder</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/14.png" alt="Shampoing à la Kératine" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Shampoing Syoss </h3>
+                                    <div class="cosmetic-prices">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section Gels Douche -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Gels Douche </h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/GD_SOUPLESSE.webp" alt="Gel Douche à la Rose" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Gel Douche Souplesse</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/dove.webp" alt="Gel Douche à la Vanille" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Gel Douche Dove </h3>
+                                    <div class="cosmetic-prices"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/nihel.webp" alt="Gel Douche à la Menthe" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Gel Douche Nihel </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/oliss.webp" alt="Gel Douche à la Lavande" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Gel Douche Oliss</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Section Huiles pour Cheveux -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Huiles pour Cheveux</h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/vatika.jpeg" alt="Huile d'Argan" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Huile Vatika</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/cytolnat-cytolcap.jpg" alt="Huile de Coco" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Huile Cytolcap</h3>
+                                    <div class="cosmetic-prices">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/zynia-bain.webp" alt="Huile de Jojoba" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Huile zynia</h3>
+                                    <div class="cosmetic-prices">
+                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/amla.jpg" alt="Huile d'Avocat" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Huile Duber Amla</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section Maquillage -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Maquillage</h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/rouge_4_4.jpg" alt="Rouge à Lèvres" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Rouge à Lèvres </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/mascara.jpeg" alt="Mascara" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Mascara Volume </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/all-covered-face-foundation.jpg" alt="Fond de Teint" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Fond de Teint </h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/palette-fard-a-joues-ultra-blush-sugarspice.jpg" alt="Palette de Fards" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Palette Fards à Paupières</h3>
+                                    <div class="cosmetic-prices">
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section Brumes -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Brumes Parfumées</h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/mania.webp" alt="Brumes Florale" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Brume Mania</h3>
+                                    <div class="cosmetic-prices">
+                                        <span class="price-badge">250ml</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/zynia.webp" alt="Brumes Fruitée" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Brume zynia </h3>
+                                    <div class="cosmetic-prices">
+                                        <span class="price-badge">250ml</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/agrad.jpeg" alt="Brumes Boisée" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Brume Argaz </h3>
+                                    <div class="cosmetic-prices">
+                                        <span class="price-badge">250ml</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/semo.webp" alt="Brumes Vanillée" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Brume Seno</h3>
+                                    <div class="cosmetic-prices">
+                                        <span class="price-badge">250ml</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section Déodorants -->
+                    <div class="cosmetic-category">
+                        <h2 class="category-title">Déodorants </h2>
+                        <div class="cosmetic-container">
+                            <div class="cosmetic-card">
+                                <img src="images/SOUPLESSE.webp" alt="Déodorant Lavande" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Déodorant Souplesse</h3>
+                                    <div class="cosmetic-prices">
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/dovee.png" alt="Déodorant Citron" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Déodorant Dove </h3>
+                                    <div class="cosmetic-prices">
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/nivea.jpg" alt="Déodorant Thé Vert" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Déodorant Nivea</h3>
+                                    <div class="cosmetic-prices">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cosmetic-card">
+                                <img src="images/rexona.jpg" alt="Déodorant Noix de Coco" class="cosmetic-image">
+                                <div class="cosmetic-info">
+                                    <h3 class="cosmetic-title">Déodorant Rexona </h3>
+                                    <div class="cosmetic-prices">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
